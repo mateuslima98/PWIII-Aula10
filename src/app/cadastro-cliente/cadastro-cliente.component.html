@@ -3,34 +3,39 @@
 
       <div class="col-12">
           <h3 class="text-center">Crie sua conta na Etec </h3>
-              <form class="mt-5" >
+              <form class="mt-5" [formGroup]="formCliente"(ngSubmit)="onSubmit()">
                   <div class="form-group">
                     <input type="text" 
                            id="inNome"   
-                           class="form-control cliente"              
+                           formControlName= "Nome" 
+                           class="form-control cliente"             
                            placeholder="Nome"/>
                   </div>
                   <div class="form-group">
                     <input type="text" 
                            id="inCPF"
-                           class="form-control cliente"    
+                           class="form-control cliente"  
+                           formControlName= "CPF"  
                            placeholder="CPF"/>
                   </div>
                   <div class="form-group">
                     <input type="email" 
                            id="inEmail"
+                           formControlName= "email"
                            class="form-control cliente"    
                            placeholder="E-mail"/>
                   </div>
                   <div class="form-group">
                     <input type="text" 
                            id="inTelefone"
+                           formControlName= "Telefone"
                            class="form-control cliente"    
                            placeholder="Telefone"/>
                     </div>
                   <div class="form-group">
                       <input type="text" 
                              id="inEndereco"
+                             formControlName= "Endereço"
                              class="form-control cliente"     
                              placeholder="Endereço"/>
                   </div>
